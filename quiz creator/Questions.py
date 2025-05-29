@@ -8,3 +8,5 @@ class Question:
     def is_valid(self):
         return self.question.strip() != "" and len(self.question) >= 10 and self.correct_label in self.choices
     
+    def is_correct(self, answer):
+        return answer == self.correct_label
