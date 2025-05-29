@@ -1,4 +1,5 @@
 import os
+from questions import Question
 
 class QuizManager:
     def __init__(self, file_name = "quiz.txt"):
@@ -10,3 +11,6 @@ class QuizManager:
         with open(self.file_name, 'r') as file:
             return any(question.lower() in line.lower() for line in file)
         
+    def save_question(self, question):
+        with open(self.file_name, "a") as file:
+            file.write(question.format_question())  
