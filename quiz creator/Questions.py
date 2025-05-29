@@ -20,4 +20,5 @@ class Question:
             output += f"{label}. {choice}\n"
         correct = self.get_correct_answer_text()
         output += f"The correct answer is: {correct}\n"
+        output += "-" * 40 + "\n"
         return output
