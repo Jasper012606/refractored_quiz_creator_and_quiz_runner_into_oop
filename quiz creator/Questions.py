@@ -10,3 +10,7 @@ class Question:
     
     def is_correct(self, answer):
         return answer == self.correct_label
+    
+    def get_correct_answer_text(self):
+        return f"{self.correct_label}. {self.choices[self.correct_label]}"
+    
