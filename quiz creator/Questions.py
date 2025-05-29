@@ -5,3 +5,6 @@ class Question:
         self.choices = choices
         self.correct_label = correct_label
     
+    def is_valid(self):
+        return self.question.strip() != "" and len(self.question) >= 10 and self.correct_label in self.choices
+    
