@@ -14,3 +14,10 @@ class Question:
     def get_correct_answer_text(self):
         return f"{self.correct_label}. {self.choices[self.correct_label]}"
     
+    def format_question(self):
+        output = f"Question: {self.question}\n"
+        for label, choice in self.choices.items():
+            output += f"{label}. {choice}\n"
+        correct = self.get_correct_answer_text()
+        output += f"The correct answer is: {correct}\n"
+        return output
